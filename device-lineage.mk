@@ -226,3 +226,9 @@ TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 # fastbootd
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fastbootd.available=true
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false \
+    persist.columbus.model=tap7cls_redfin.tflite
