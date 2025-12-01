@@ -762,8 +762,9 @@ endif
 # Project
 include hardware/google/pixel/common/pixel-common-device.mk
 
-# gs-common
-include device/google/gs-common/misc_writer/misc_writer.mk
+# Misc Writer
+PRODUCT_PACKAGES += \
+    misc_writer
 
 # Citadel
 include hardware/google/pixel/citadel/citadel.mk
@@ -771,8 +772,10 @@ include hardware/google/pixel/citadel/citadel.mk
 # Factory OTA
 -include vendor/google/factoryota/client/factoryota.mk
 
-# thermal
-include device/google/gs-common/thermal/thermal_hal/device.mk
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.pixel \
+    thermal_symlinks
 
 # power HAL
 -include hardware/google/pixel/power-libperfmgr/aidl/device.mk
@@ -782,9 +785,6 @@ include device/google/gs-common/thermal/thermal_hal/device.mk
 
 # Pixel Logger
 include hardware/google/pixel/PixelLogger/PixelLogger.mk
-
-# Touch service
-include device/google/gs-common/touch/twoshay/twoshay.mk
 #################################################################################
 
 # Update soong config namespace
