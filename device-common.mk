@@ -565,9 +565,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     vendor.skip.init=0
 
-# Enable backpressure for GL comp
+# Disable backpressure for GL comp to fix lag when blur is enabled
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_gl_backpressure=1
+    debug.sf.enable_gl_backpressure=0
 
 BOARD_USES_QCNE := true
 
