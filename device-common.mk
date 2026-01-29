@@ -509,7 +509,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set network mode to Global (NR 5G, LTE, CDMA, EvDo, GSM and WCDMA) by default and no DSDS/DSDA
 PRODUCT_PROPERTY_OVERRIDES += ro.telephony.default_network=27
 
-# Set display color mode to Adaptive by default
+# Do not set display color mode to Adaptive by default
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=0 \
